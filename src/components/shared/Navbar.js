@@ -30,7 +30,10 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className={`absolute transition-all h-full z-20 duration-500 p-5 bg-black text-white w-9/12 shadow-2xl right-0 top-14 mt-8 md:hidden ${!isNavOpen ? 'translate-x-full -mr-96' : 'translate-x-0 -mr-0'}  uppercase`}>
+                    <div className={`absolute transition-all h-full z-10 duration-500 p-5 bg-black text-white w-8/12 shadow-2xl right-0 top-0 pt-24 md:hidden ${!isNavOpen ? 'translate-x-full -mr-96' : 'translate-x-0 -mr-0'}  uppercase`}>
+                        <button className='bg-white border-white border top-9 right-14 p-2 absolute z-50' onClick={() => setIsNavOpen(!isNavOpen)}>
+                            <GrClose color="white" />
+                        </button>
                         <ul>
                             <li className="hover:bg-[#A67866] mb-3 p-2">
                                 <Link to={'/'}>Home</Link>
@@ -46,22 +49,16 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="book-button-container z-0 relative font-bold transition-all flex items-center bg-[#b58e7e] hover:bg-[#A67866] px-6 h-full uppercase">
+                    <Link className="book-button-container z-0 relative font-bold transition-all flex items-center bg-[#b58e7e] hover:bg-[#A67866] px-6 h-full uppercase">
                         <p>
                             <GiCarKey className='text-5xl absolute top-2 left-1 z-10 text-white' />
-                            <Link className="underline text-white h-full">Book Room Now</Link>
+                            <span className="underline text-white h-full">Book Room Now</span>
                         </p>
-                    </div>
-                    <div className="toggle-btn   text-2xl md:hidden">
-                        {
-                            !isNavOpen ?
-                                <button onClick={() => setIsNavOpen(!isNavOpen)}>
-                                    <RxHamburgerMenu />
-                                </button> :
-                                <button onClick={() => setIsNavOpen(!isNavOpen)}>
-                                    <GrClose />
-                                </button>
-                        }
+                    </Link>
+                    <div className="toggle-btn text-2xl md:hidden">
+                        <button onClick={() => setIsNavOpen(!isNavOpen)}>
+                            <RxHamburgerMenu />
+                        </button>
                     </div>
                 </div>
             </div>
