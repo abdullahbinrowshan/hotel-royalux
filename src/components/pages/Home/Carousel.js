@@ -1,9 +1,7 @@
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-
-import carousel1 from '../assets/carousel1.jpg';
-import carousel2 from '../assets/carousel2.jpg';
-import carousel3 from '../assets/carousel3.jpg';
-import carousel4 from '../assets/carousel4.jpg';
+import carousel1 from '../../../assets/carousel1.jpg';
+import carousel2 from '../../../assets/carousel2.jpg';
+import carousel3 from '../../../assets/carousel3.jpg';
 import { useState } from 'react';
 
 const Carousel = () => {
@@ -61,7 +59,7 @@ const Carousel = () => {
                         </h2>
                         <p className='md:text-5xl text-4xl text-[#D3A478] mt-5'>from <span className='md:text-6xl font-bold text-5xl'>${slides[currentIndex].price}.00 </span> / night</p>
                     </div>
-                    <button className='transition-all duration-500 font-semibold py-3 px-5 bg-[#A67866] border-2 border-[#A67866] hover:border-white hover:bg-opacity-0 '>SEE THE ROOMS</button>
+                    <button className='transition-all duration-500 font-semibold py-3 px-5 bg-[#D3A478] border-2 border-[#D3A478] hover:bg-opacity-0 '>SEE THE ROOMS</button>
                 </div>
                 {/* left arrow */}
                 <div className='md:hidden group-hover:block absolute top-[50%] left-5 border-white border text-2xl p-5 text-white cursor-pointer '>
