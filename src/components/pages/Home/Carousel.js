@@ -62,12 +62,12 @@ const Carousel = () => {
                     <button className='transition-all duration-500 font-semibold py-3 px-5 bg-[#D3A478] border-2 border-[#D3A478] hover:bg-opacity-0 '>SEE THE ROOMS</button>
                 </div>
                 {/* left arrow */}
-                <div className='md:hidden group-hover:block absolute top-[50%] left-5 border-white border text-2xl p-5 text-white cursor-pointer '>
-                    <BsChevronLeft onClick={prevSlide} size={15} />
+                <div onClick={prevSlide} className='md:hidden group-hover:block absolute top-[50%] left-5 border-white border text-2xl p-5 text-white cursor-pointer '>
+                    <BsChevronLeft size={15} />
                 </div>
                 {/* right arrow */}
-                <div className='md:hidden group-hover:block absolute top-[50%] right-5 border-white border text-2xl p-5 text-white cursor-pointer '>
-                    <BsChevronRight onClick={nextSlide} size={15} />
+                <div onClick={nextSlide} className='md:hidden group-hover:block absolute top-[50%] right-5 border-white border text-2xl p-5 text-white cursor-pointer '>
+                    <BsChevronRight size={15} />
                 </div>
                 <div className="flex absolute bottom-3 w-full justify-center">
                     <div className='flex bg-black p-2 px-5 gap-3'>{
